@@ -1,0 +1,3 @@
+Websites scraped:
+
+1. https://books.toscrape.com/ - Books to scrape
