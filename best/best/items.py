@@ -14,4 +14,5 @@ class BestItem(scrapy.Item):
     eStatus = scrapy.Field()
     aNome = scrapy.Field()
     fIndirizzo = scrapy.Field()  # Via C. Pomo
-    gCitta_provincia = scrapy.Field()  # Milano
+    gCitta = scrapy.Field()  # Milano
+    hProvincia = scrapy.Field()
