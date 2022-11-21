@@ -13,7 +13,9 @@ class Spyder(scrapy.Spider):
 
         Numeros = response.css('small:nth-child(3)::text').extract()
         PEC = response.css('tr~ tr+ tr td+ td::text').extract()
-        Codice_fiscale = response.css('small~ small::text').extract()
+        Codicefiscale = response.css('small~ small::text').extract()
+        Codice_fiscale = ([Codice_fiscale.replace('Codice fiscale:', '') for Codice_fiscale in Codicefiscale])
+
         Status = response.css('.studioDetails small::text').extract()
         Nome = response.xpath('//*[@id="post-70"]/div/div[2]/div[1]/div/div/text()').extract()
         s = ([s.replace('\n', '') for s in Nome])
@@ -27,14 +29,20 @@ class Spyder(scrapy.Spider):
         indirizzo = 0
         citta_provincia = 1
         nome = 0
+
         for numero, codice_fiscale, pec, status, i, h in zip(Numeros, Codice_fiscale, PEC, Status, p, b):
+            cp = str(b[citta_provincia])
+            citta = cp.split('-')[0]
+            provincia = cp.split('-')[1]
+
             items['bNumero'] = numero
             items['cCodice_fiscale'] = codice_fiscale
             items['dPEC'] = pec
             items['eStatus'] = status
             items['aNome'] = p[nome]
             items['fIndirizzo'] = b[indirizzo]
-            items['gCitta_provincia'] = b[citta_provincia]
+            items['gCitta'] = citta
+            items['hProvincia'] = provincia
 
             nome = nome + 1
             indirizzo = indirizzo + 2
