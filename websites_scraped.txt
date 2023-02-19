@@ -1,4 +1,4 @@
 Websites scraped:
 
-1. https://books.toscrape.com/                                      - Books to scrape
-2. https://consulentidellavoro.mi.it/ordine/gli-iscritti-allordine/ - Gli Iscritti all’Ordine di Milano
+1. https://consulentidellavoro.mi.it/ordine/gli-iscritti-allordine/ - Gli Iscritti all’Ordine di Milano
+2. https://books.toscrape.com/                                      - Books to scrape
