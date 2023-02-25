@@ -2,3 +2,4 @@ Websites scraped:
 
 1. https://consulentidellavoro.mi.it/ordine/gli-iscritti-allordine/ - Gli Iscritti all’Ordine di Milano
 2. https://books.toscrape.com/                                      - Books to scrape
+3. https://kimetsu-no-yaiba.fandom.com                              - All episodes and Seasons of the Demon Slayer
